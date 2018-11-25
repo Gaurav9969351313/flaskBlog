@@ -7,6 +7,7 @@ from flask_login import LoginManager
 
 from companyblog.core.views import core
 from companyblog.errorpages.handlers import errorpages
+from companyblog.users.views import users
 
 app = Flask(__name__)
 
@@ -23,3 +24,4 @@ loinManager.login_view= 'users.login'
 
 app.register_blueprint(core)
 app.register_blueprint(errorpages)
+app.register_blueprint(users)
